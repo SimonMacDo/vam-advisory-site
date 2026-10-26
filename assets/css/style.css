@@ -1,0 +1,4 @@
+/* Minimal placeholder styles. Corporate identity and design are pending approval. */
+body { max-width: 48rem; margin: 3rem auto; padding: 0 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #222; }
+nav ul { display: flex; flex-wrap: wrap; gap: 1rem; padding: 0; list-style: none; }
+a { color: #17496b; }

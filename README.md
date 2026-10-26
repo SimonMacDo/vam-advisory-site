@@ -1,56 +1,45 @@
 # VAM Advisory website rebuild
 
-Staging and rebuild repository for a future VAM Advisory static website. GitHub is the source of truth. Default branch: `main`.
+GitHub is the source of truth for this static website. Default branch: `main`.
 
-## Scope and boundaries
+## Status
 
-- Preserve the existing live website at https://vamadvisory.com throughout development.
-- Do not change the live domain, DNS, nameservers, email records or hosting.
-- Do not connect a custom domain or enable automatic deployment during initial setup.
-- This repository contains structural placeholders, not an approved redesign or replacement website.
-- This repository is public. Do not commit credentials, client information or unpublished personal data.
+First review draft based on the supplied **VAM capability 2026** presentation and the instruction to lead with in-house legal documentation and litigation support. US listing services are excluded. Historical professional roles appear only as background on Vera Tan's profile.
 
-## Structure
+This is a staging/rebuild repository. The existing live website at https://vamadvisory.com remains unchanged. Do not change its DNS, nameservers, email records or hosting, or connect a custom domain, without separate approval.
 
-| Path | Purpose |
-| --- | --- |
-| `index.html` | Home placeholder |
-| `services/index.html` | Services overview placeholder |
-| `team/index.html` | Team overview placeholder |
-| `team/vera-tan/index.html` | Dedicated Vera Tan profile placeholder |
-| `contact/index.html` | Contact placeholder |
-| `assets/css/style.css` | Shared styles |
-| `assets/js/` | Future scripts |
-| `assets/images/` | Approved imagery |
-| `assets/fonts/` | Licensed fonts |
-| `robots.txt` | Development crawler block |
-| `sitemap.xml` | Empty development sitemap |
-| `docs/seo-plan.md` | Content, SEO and launch requirements |
+## Pages
 
-## Local preview
+- `index.html`: Home
+- `services/index.html`: six service areas, with legal documentation and litigation support first
+- `case-studies/index.html`: four anonymised engagements from the presentation
+- `team/index.html`: team introduction
+- `team/vera-tan/index.html`: dedicated founder profile
+- `contact/index.html`: contact details from the presentation
+- `assets/css/style.css`: responsive shared styling
+- `assets/images/`: original logo and Vera photograph extracted from the supplied presentation
+- `assets/js/`, `assets/fonts/`: reserved folders
+- `robots.txt`, `sitemap.xml`: staging SEO files
+- `docs/seo-plan.md`: SEO direction and launch requirements
 
-No framework, package installation or build step is required. From the repository root:
+## Preview and indexing
+
+A separate GitHub Pages preview may be enabled for this repository, with no custom domain. Its purpose is review only, not replacement of the live website. GitHub Pages should publish from the root of `main`.
+
+Every HTML page contains `noindex, nofollow, noarchive`. `robots.txt` disallows all crawling and sitemap.xml deliberately contains no URLs. Robots directives are voluntary and do not provide access control. Because robots.txt blocks crawling, crawlers may not see page-level noindex, and a publicly linked staging URL may still appear in results. The public GitHub repository may itself be indexed. Do not submit staging to search engines. If strict exclusion is required, use an authenticated preview.
+
+## Editing and local preview
+
+Plain HTML and CSS. No build step, dependencies, tracking scripts or form backend. Contact links open the visitor's email or phone application.
 
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open http://localhost:8000. Keep preview access local until a separate staging environment has been approved.
+Open http://localhost:8000. Use relative asset and page links so the site works under the GitHub Pages repository path.
 
-## Search visibility during development
+## Content review before launch
 
-`robots.txt` requests that crawlers avoid all paths. Every HTML placeholder also includes `noindex, nofollow, noarchive`.
+Vera should confirm service scope, biography, historic roles, the office contact details and case-study wording and figures. Client names and logos have not been published. No litigation case study, testimonial or additional outcome has been invented. Add further material when available.
 
-Robots rules are voluntary, not access control. A disallowed URL can still appear in search results without its content being crawled. A crawler blocked by robots.txt cannot read the page's noindex instruction. Therefore keep staging unpublished, or protect any future preview with authentication. Public GitHub repository content may itself be indexed independently of these website rules.
-
-Do not add staging URLs to sitemaps, submit them to search engines or point the live domain at this repository. The sitemap remains empty until production URLs and launch timing are approved.
-
-## Planned SEO direction
-
-Improve accurate, useful coverage of VAM Advisory, VAM Advisory Hong Kong, VAM Advisory Limited, Vera Tan, Vera Tan VAM Advisory, and verified consulting/advisory services. Give Vera her own substantive profile linked from the team page. Verify the legal entity name, services, credentials and contact details before publishing claims. See `docs/seo-plan.md`.
-
-## Next step
-
-Audit the existing website in read-only mode and agree the positioning, service list, page inventory and verified Vera Tan biography. Record existing URLs and prepare a redirect mapping before any later migration.
-
-Production launch requires separate approval. Review indexing rules, approved metadata, canonical URLs, structured data, sitemap and redirects before deployment. Live infrastructure changes remain outside the initial setup scope.
+Before any separately approved production launch, audit existing URLs and redirects, confirm production canonical URLs and structured data, generate the production sitemap and replace development indexing controls. Keep staging excluded from search after launch.

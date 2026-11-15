@@ -20,7 +20,7 @@ The explicit page-copy blocks are implemented within the existing HTML/CSS layou
 | `/case-studies/` | Supplied introduction and four case narratives; no invented outcomes or named-client attribution. |
 | `/team/` | Supplied heading/introduction; existing Vera, Todd and Konrad cards retained in order; Toby appended as member four. |
 | `/team/vera-tan/` | Supplied subheading, opening, background, corresponding experience wording and closing; existing founder title, photo and other background retained. |
-| `/team/toby-wai/` | New profile with the complete four-paragraph biography verbatim and supplied Senior Legal & Compliance Adviser title. No photograph or invented synopsis. |
+| `/team/toby-wai/` | New profile with the complete four-paragraph biography verbatim and supplied Senior Legal & Compliance Adviser title. Supplied photograph added; no invented synopsis. |
 | `/contact/` | Supplied contact heading, introduction, email copy and button; existing contact details retained. |
 | `/team/todd-james/`, `/team/konrad-li/` | Shared footer and closing-section copy only; individual biographies, roles and photographs unchanged. |
 
@@ -45,7 +45,7 @@ All nine pages use the supplied footer descriptor and, where a closing section e
 
 ## Decisions/assets for Vera
 
-1. Supply an approved Toby photograph if one should be shown. His title and relationship to VAM are explicitly supplied in his biography and require no invention.
+1. Toby’s photograph was supplied after the first review draft and is now included unchanged on his team card and profile. His title and relationship to VAM are explicitly supplied in his biography.
 2. Choose the final case-page/navigation label; confirm whether “Success Cses” is a typo to correct.
 3. Confirm whether to add the proposed named-client section and approve any client wordmark assets.
 4. Existing Todd and Konrad role/association confirmation notices remain; their current approved titles should be confirmed before launch.
@@ -65,3 +65,7 @@ All nine pages use the supplied footer descriptor and, where a closing section e
 - No merge, production deployment, live-site write, DNS, hosting or email configuration change was made. The original live website was not modified by this work.
 
 Do not merge or publish as a production launch without the separately requested review and approval.
+
+## Photograph follow-up — 15 November 2026
+
+Added the user-supplied Toby portrait unchanged as `assets/images/toby-wai.jpeg`, linked from his team card and profile using existing image styling. No biography, CSS, existing photographs or production configuration changed.

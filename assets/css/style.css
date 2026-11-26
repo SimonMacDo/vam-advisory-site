@@ -50,3 +50,75 @@
   .home-founder h2{font-size:41px}
   .home-cta-inner{align-items:flex-start;flex-direction:column;gap:26px}
 }
+
+
+/* VAM Advisory corporate-identity alignment — grounded in approved letterhead,
+   26 November 2026. Presentation-only override: no approved copy changed. */
+:root{
+  --ink:#111111;
+  --muted:#525252;
+  --paper:#ffffff;
+  --gold:#ffc400;
+  --line:#d7d7d7;
+  --dark:#191919;
+}
+body{background:#ffffff;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+h1,h2,h3{font-family:Arial,Helvetica,sans-serif;font-weight:500;letter-spacing:-.038em}
+h1,h2{line-height:1.12}
+.header{position:relative;background:#ffffff;border-bottom:1px solid #242424}
+.header::before{content:"";position:absolute;left:0;top:0;height:100%;width:11px;background:var(--gold)}
+.header::after{content:"";position:absolute;right:0;top:0;height:53px;width:25px;background:var(--gold)}
+.brand{
+  display:block;width:185px;height:71px;flex:0 0 185px;
+  background-image:url("../images/vam-letterhead-mark.svg");
+  background-repeat:no-repeat;background-position:left center;background-size:contain;
+}
+.brand img{width:100%;height:100%;opacity:0}
+.header nav a[aria-current=page]{text-decoration-color:var(--gold);text-decoration-thickness:3px}
+.header nav a:hover,.text-link:hover,.home-service-link:hover{color:#363636}
+.header nav .nav-contact{border:1px solid #191919}
+.header nav .nav-contact:hover{background:var(--gold);color:var(--ink)}
+.review-bar{background:var(--dark);color:white}
+.eyebrow,.small-label{color:#2d2d2d}
+.button-dark{background:#111111;color:#ffffff;border-color:#111111}
+.button-dark:hover{background:#333333}
+.button-dark span,.text-link span{color:var(--gold)}
+.home-hero{position:relative;padding-left:44px}
+.home-hero::before{content:"";position:absolute;left:0;top:75px;height:calc(100% - 150px);width:12px;background:var(--gold)}
+.home-hero h1{font-weight:500}
+.home-hero-image{border-left:7px solid var(--gold)}
+.home-hero-image img{filter:none}
+.home-hero-image figcaption{color:#4b4b4b}
+.home-service-link{border-color:#cdcdcd}
+.home-service-link span{color:#262626}
+.case-feature{background:#191919;color:#ffffff}
+.case-feature .eyebrow{color:var(--gold)}
+.home-case h2{color:#ffffff}
+.home-case-stat{border-left-color:var(--gold)}
+.home-case-stat strong{font-family:Arial,Helvetica,sans-serif;font-weight:500;color:var(--gold)}
+.home-founder .role{color:#555555}
+.portrait-wrap:before{background:#f4e4aa}
+.cta{background:var(--gold);color:#111111}
+.cta .eyebrow{color:#2b2b2b}
+.cta .button-dark{border-color:#111111}
+.footer{position:relative;background:#ffffff;border-top:1px solid #171717}
+.footer::before{content:"";position:absolute;left:0;top:0;width:11px;height:100%;background:var(--gold)}
+.footer-brand{font-family:Arial,Helvetica,sans-serif;font-weight:500;letter-spacing:-.04em}
+.footer .gold{color:#111111}
+.footer-grid .footer-label{color:#2d2d2d}
+.footer-grid>div>p{color:#555555}
+.contact-details{background:#f5f5f5}
+.intro-band{background:#f6f6f6}
+.service-row:hover{background:#fff8db}
+.metric strong{color:var(--gold)}
+.metric{border-left-color:var(--gold)}
+.case-stat{color:#a07800}
+@media(max-width:760px){
+  .header::before,.footer::before{width:7px}
+  .header::after{width:13px;height:33px}
+  .brand{width:154px;height:58px;flex-basis:154px}
+  .brand img{width:100%;height:100%}
+  .home-hero{padding-left:20px}
+  .home-hero::before{top:42px;height:160px;width:6px}
+  .home-hero-image{border-left-width:5px}
+}
